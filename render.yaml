@@ -8,8 +8,9 @@ services:
     # keep this in the same region as the Neon database, it can't be changed later
     region: frankfurt
     rootDir: backend
-    dockerfilePath: ./backend/Dockerfile
-    dockerContext: ./backend
+    # both relative to rootDir
+    dockerfilePath: ./Dockerfile
+    dockerContext: .
     healthCheckPath: /health
     # only deploy commits that passed the GitHub Actions CI
     autoDeployTrigger: checksPass
