@@ -3,6 +3,8 @@
 A small notes app. You paste some text, and the backend generates a short summary and 3-5 tags for it. You can
 filter notes by tag, re-summarize them and delete them. Each user only sees their own notes.
 
+**Demo Video:** https://www.youtube.com/watch?v=8xP-7JYOPF8
+
 ## Tech choices
 
 - **Backend:** Python 3.12, FastAPI, SQLAlchemy 2, Alembic for migrations
