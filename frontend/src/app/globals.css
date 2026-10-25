@@ -1,0 +1,97 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: system-ui, sans-serif;
+  line-height: 1.5;
+  color: #222;
+}
+
+main {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 24px 16px;
+}
+
+input,
+textarea,
+button {
+  font: inherit;
+}
+
+input,
+textarea {
+  width: 100%;
+  padding: 6px 8px;
+  margin-bottom: 8px;
+}
+
+button {
+  cursor: pointer;
+}
+
+button:disabled {
+  cursor: default;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.error {
+  color: #b00020;
+}
+
+.muted {
+  color: #777;
+  font-size: 0.9em;
+}
+
+.note {
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  padding: 12px;
+  margin-bottom: 12px;
+}
+
+.note h3 {
+  margin: 0 0 4px;
+}
+
+.note p {
+  margin: 4px 0;
+}
+
+.tag {
+  border: 1px solid #ccc;
+  background: #f4f4f4;
+  border-radius: 12px;
+  padding: 0 8px;
+  margin: 0 4px 4px 0;
+  font-size: 0.85em;
+}
+
+.tag.active {
+  background: #222;
+  color: #fff;
+}
+
+.filter {
+  display: flex;
+  gap: 8px;
+  align-items: flex-start;
+}
+
+.filter input {
+  flex: 1;
+}
+
+.actions {
+  display: flex;
+  gap: 8px;
+  margin-top: 8px;
+}
