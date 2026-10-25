@@ -1,0 +1,26 @@
+# Render Blueprint for the backend. Create it with New -> Blueprint and pick this repo;
+# Render asks for the sync: false values once, during that first setup.
+services:
+  - type: web
+    name: briefbase-api
+    runtime: docker
+    plan: free
+    # keep this in the same region as the Neon database, it can't be changed later
+    region: frankfurt
+    rootDir: backend
+    dockerfilePath: ./backend/Dockerfile
+    dockerContext: ./backend
+    healthCheckPath: /health
+    # only deploy commits that passed the GitHub Actions CI
+    autoDeployTrigger: checksPass
+    envVars:
+      - key: DATABASE_URL
+        sync: false
+      - key: JWT_SECRET
+        generateValue: true
+      - key: ANTHROPIC_API_KEY
+        sync: false
+      - key: ANTHROPIC_MODEL
+        value: claude-opus-5-5
+      - key: CORS_ORIGINS
+        sync: false
